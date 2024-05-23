@@ -550,7 +550,7 @@
                         "maxStackSize": 67108864, 
                         "ppid": 0, 
                         "type": "Process", 
-                        "cwd": "/home/q33566/gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e", 
+                        "cwd": "/home/q33566/Computer_Organization_Final/gem5-525ce650e1a5bbe71c39d4b15598d6c003cc9f9e", 
                         "pgid": 100, 
                         "simpoint": 0, 
                         "euid": 100, 
@@ -802,7 +802,7 @@
                 "clk_domain": "system.cpu_clk_domain", 
                 "power_model": [], 
                 "sequential_access": false, 
-                "assoc": 2, 
+                "assoc": 1, 
                 "warmup_percentage": 0, 
                 "cxx_class": "BaseSetAssoc", 
                 "p_state_clk_gate_max": 1000000000000, 
@@ -826,7 +826,7 @@
             "name": "l3", 
             "p_state_clk_gate_bins": 20, 
             "sequential_access": false, 
-            "assoc": 2
+            "assoc": 1
         }, 
         "cpu_voltage_domain": {
             "name": "cpu_voltage_domain", 
