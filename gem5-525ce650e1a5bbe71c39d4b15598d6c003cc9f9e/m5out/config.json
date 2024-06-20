@@ -541,7 +541,7 @@
                         "pid": 100, 
                         "kvmInSE": false, 
                         "cxx_class": "Process", 
-                        "executable": "../benchmark/quickSort", 
+                        "executable": "../benchmark/quicksort", 
                         "drivers": [], 
                         "system": "system", 
                         "gid": 100, 
@@ -558,7 +558,7 @@
                         "path": "system.cpu.workload", 
                         "name": "workload", 
                         "cmd": [
-                            "../benchmark/quickSort"
+                            "../benchmark/quicksort"
                         ], 
                         "errout": "cerr", 
                         "useArchPT": false, 
@@ -706,7 +706,7 @@
             "write_buffers": 8, 
             "response_latency": 20, 
             "cxx_class": "Cache", 
-            "size": 131072, 
+            "size": 262144, 
             "type": "Cache", 
             "clk_domain": "system.cpu_clk_domain", 
             "max_miss_count": 0, 
@@ -721,7 +721,7 @@
             "writeback_clean": false, 
             "p_state_clk_gate_min": 1000, 
             "tags": {
-                "size": 131072, 
+                "size": 262144, 
                 "tag_latency": 20, 
                 "replacement_policy": "system.l2.replacement_policy", 
                 "name": "tags", 
@@ -776,7 +776,7 @@
             "write_buffers": 16, 
             "response_latency": 20, 
             "cxx_class": "Cache", 
-            "size": 1048576, 
+            "size": 131072, 
             "type": "Cache", 
             "clk_domain": "system.cpu_clk_domain", 
             "max_miss_count": 0, 
@@ -791,7 +791,7 @@
             "writeback_clean": false, 
             "p_state_clk_gate_min": 1000, 
             "tags": {
-                "size": 1048576, 
+                "size": 131072, 
                 "tag_latency": 20, 
                 "replacement_policy": "system.l3.replacement_policy", 
                 "name": "tags", 
@@ -802,7 +802,7 @@
                 "clk_domain": "system.cpu_clk_domain", 
                 "power_model": [], 
                 "sequential_access": false, 
-                "assoc": 1, 
+                "assoc": 2, 
                 "warmup_percentage": 0, 
                 "cxx_class": "BaseSetAssoc", 
                 "p_state_clk_gate_max": 1000000000000, 
@@ -826,7 +826,7 @@
             "name": "l3", 
             "p_state_clk_gate_bins": 20, 
             "sequential_access": false, 
-            "assoc": 1
+            "assoc": 2
         }, 
         "cpu_voltage_domain": {
             "name": "cpu_voltage_domain", 
