@@ -27,7 +27,6 @@
  *
  * Authors: Daniel Carvalho
  */
-
 #include "mem/cache/replacement_policies/my_rp.hh"
 
 #include <cassert>
@@ -45,8 +44,8 @@ MYRP::invalidate(const std::shared_ptr<ReplacementData>& replacement_data)
 const
 {
     // Reset insertion tick
-    std::static_pointer_cast<MYReplData>(
-        replacement_data)->tickInserted = Tick(0);
+    //std::static_pointer_cast<MYReplData>(
+     //   replacement_data)->tickInserted = Tick(0);
 }
 
 void
@@ -59,28 +58,32 @@ void
 MYRP::reset(const std::shared_ptr<ReplacementData>& replacement_data) const
 {
     // Set insertion tick
-    std::static_pointer_cast<MYReplData>(
-        replacement_data)->tickInserted = curTick();
+    //std::static_pointer_cast<MYReplData>(
+    //    replacement_data)->tickInserted = curTick();
 }
 
 ReplaceableEntry*
 MYRP::getVictim(const ReplacementCandidates& candidates) const
 {
+
     // There must be at least one replacement candidate
     assert(candidates.size() > 0);
 
     // Visit all candidates to find victim
     ReplaceableEntry* victim = candidates[0];
-    for (const auto& candidate : candidates) {
+    //count ++;
+    /*for (const auto& candidate : candidates) {
         // Update victim entry if necessary
+        
         if (std::static_pointer_cast<MYReplData>(
                     candidate->replacementData)->tickInserted <
                 std::static_pointer_cast<MYReplData>(
-                    victim->replacementData)->tickInserted) {
+                    victim->replacementData)->tickInserted){
             victim = candidate;
+            return victim;
         }
-    }
-
+        
+    }*/
     return victim;
 }
 

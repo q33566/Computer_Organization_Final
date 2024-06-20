@@ -70,8 +70,7 @@ RandomRP::getVictim(const ReplacementCandidates& candidates) const
     assert(candidates.size() > 0);
 
     // Choose one candidate at random
-    ReplaceableEntry* victim = candidates[random_mt.random<unsigned>(0,
-                                    candidates.size() - 1)];
+    ReplaceableEntry* victim;
 
     // Visit all candidates to search for an invalid entry. If one is found,
     // its eviction is prioritized
@@ -79,10 +78,11 @@ RandomRP::getVictim(const ReplacementCandidates& candidates) const
         if (!std::static_pointer_cast<RandomReplData>(
                     candidate->replacementData)->valid) {
             victim = candidate;
-            break;
+            return victim;
         }
     }
-
+    victim = candidates[random_mt.random<unsigned>(0,
+                                    candidates.size() - 1)];
     return victim;
 }
 

@@ -706,7 +706,7 @@
             "write_buffers": 8, 
             "response_latency": 20, 
             "cxx_class": "Cache", 
-            "size": 262144, 
+            "size": 131072, 
             "type": "Cache", 
             "clk_domain": "system.cpu_clk_domain", 
             "max_miss_count": 0, 
@@ -721,7 +721,7 @@
             "writeback_clean": false, 
             "p_state_clk_gate_min": 1000, 
             "tags": {
-                "size": 262144, 
+                "size": 131072, 
                 "tag_latency": 20, 
                 "replacement_policy": "system.l2.replacement_policy", 
                 "name": "tags", 
@@ -762,9 +762,9 @@
             "replacement_policy": {
                 "eventq_index": 0, 
                 "path": "system.l3.replacement_policy", 
-                "type": "LRURP", 
+                "type": "FIFORP", 
                 "name": "replacement_policy", 
-                "cxx_class": "LRURP"
+                "cxx_class": "FIFORP"
             }, 
             "cpu_side": {
                 "peer": "system.tol3bus.master[0]", 
@@ -774,9 +774,9 @@
             "prefetcher": null, 
             "system": "system", 
             "write_buffers": 16, 
-            "response_latency": 20, 
+            "response_latency": 32, 
             "cxx_class": "Cache", 
-            "size": 131072, 
+            "size": 262144, 
             "type": "Cache", 
             "clk_domain": "system.cpu_clk_domain", 
             "max_miss_count": 0, 
@@ -791,8 +791,8 @@
             "writeback_clean": false, 
             "p_state_clk_gate_min": 1000, 
             "tags": {
-                "size": 131072, 
-                "tag_latency": 20, 
+                "size": 262144, 
+                "tag_latency": 32, 
                 "replacement_policy": "system.l3.replacement_policy", 
                 "name": "tags", 
                 "p_state_clk_gate_min": 1000, 
@@ -809,7 +809,7 @@
                 "path": "system.l3.tags", 
                 "block_size": 64, 
                 "type": "BaseSetAssoc", 
-                "data_latency": 20
+                "data_latency": 32
             }, 
             "tgts_per_mshr": 24, 
             "demand_mshr_reserve": 1, 
@@ -821,8 +821,8 @@
             "warmup_percentage": 0, 
             "prefetch_on_access": false, 
             "path": "system.l3", 
-            "data_latency": 20, 
-            "tag_latency": 20, 
+            "data_latency": 32, 
+            "tag_latency": 32, 
             "name": "l3", 
             "p_state_clk_gate_bins": 20, 
             "sequential_access": false, 
